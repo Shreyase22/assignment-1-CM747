@@ -3,14 +3,6 @@ import pandas as pd
 
 
 def entropy(Y):
-    """
-    Function to calculate the entropy 
-
-    Inputs:
-    > Y: pd.Series of Labels
-    Outpus:
-    > Returns the entropy as a float
-    """
     classes = dict()
     for i in range(Y.size):
         if(Y.iat[i] in classes):
@@ -28,14 +20,6 @@ def entropy(Y):
 
 
 def gini_index(Y):
-    """
-    Function to calculate the gini index
-
-    Inputs:
-    > Y: pd.Series of Labels
-    Outpus:
-    > Returns the gini index as a float
-    """
     classes = dict()
     for i in range(Y.size):
         if(Y.iat[i] in classes):
@@ -55,15 +39,6 @@ def gini_index(Y):
 
 
 def information_gain(Y, attr):
-    """
-    Function to calculate the information gain
-    
-    Inputs:
-    > Y: pd.Series of Labels
-    > attr: pd.Series of attribute at which the gain should be calculated
-    Outputs:
-    > Return the information gain as a float
-    """
     assert(attr.size==Y.size)
 
     classes_attr = dict()
